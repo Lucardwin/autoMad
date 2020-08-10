@@ -1,0 +1,39 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 15MB
+      max-request-size: 15MB
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: lauracolosimo120389@gmail.com
+    password: Polipopolipo89@
+    protocol: smtp
+    tls: true
+    properties.mail.smtp:
+        auth: true
+        starttls.enable: true
+        ssl.trust: smtp.gmail.com
+  jpa:
+    properties:
+      hibernate:
+        default_schema: project_mad
+        temp:
+          use_jdbc_metadata_defaults: false
+          jdbc:
+            lob: null
+            non_contextual_creation: true
+    database: POSTGRESQL
+    show-sql: false
+    hibernate:
+      ddl-auto: validate
+  datasource:
+    platform: postgres
+    url: 'jdbc:postgresql://localhost:5432/MAD'
+    username: postgres
+    password: polipo
+    driverClassName: org.postgresql.Driver
+# SSL, post 465
+
+#spring.mail.properties.mail.smtp.socketFactory.port = 465
+#spring.mail.properties.mail.smtp.socketFactory.class = javax.net.ssl.SSLSocketFactory
